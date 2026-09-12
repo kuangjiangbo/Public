@@ -1,0 +1,3 @@
+"id.exposure","id.outcome","outcome","exposure","method","Q","Q_df","Q_pval"
+"IL6","Keloid","Keloids","Interleukin-6 levels","MR Egger",3.41365130877927,21,0.999995102553044
+"IL6","Keloid","Keloids","Interleukin-6 levels","Inverse variance weighted",5.27437664196101,22,0.999901955425767
