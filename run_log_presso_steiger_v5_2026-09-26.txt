@@ -1,0 +1,74 @@
+R 4.4.3 | TwoSampleMR 0.7.9 | MRPRESSO 1.0 
+MR-PRESSO seed = 20260926 | NbDistribution = 1000
+
+== 1. MR-PRESSO（固定种子）==
+=== All 23 SNPs  nSNP=22 ===
+  RSSobs = 6.408998 | Global P = 1 | outliers(P<0.05) = NA 
+=== IL6R locus only  nSNP=12 ===
+  RSSobs = 6.061078 | Global P = 0.934 | outliers(P<0.05) = NA 
+=== HLA locus only  nSNP=10 ===
+  RSSobs = 0.5229221 | Global P = 1 | outliers(P<0.05) = NA 
+=== All minus rs2228145  nSNP=21 ===
+  RSSobs = 6.520435 | Global P = 1 | outliers(P<0.05) = NA 
+=== IL6R minus rs2228145  nSNP=11 ===
+  RSSobs = 6.320339 | Global P = 0.901 | outliers(P<0.05) = NA 
+
+-- MR-PRESSO：固定种子 vs 原无种子 --
+Key: <Analysis>
+             Analysis RSSobs_old P_old RSSobs_new P_new
+               <char>      <num> <num>      <num> <num>
+          All 23 SNPs  6.4089977 1.000  6.4089977 1.000
+  All minus rs2228145  6.5204350 1.000  6.5204350 1.000
+       HLA locus only  0.5229221 1.000  0.5229221 1.000
+      IL6R locus only  6.0610780 0.931  6.0610780 0.934
+ IL6R minus rs2228145  6.3203392 0.864  6.3203392 0.901
+
+== 2. Steiger 方向性检验 ==
+ id.exposure   id.outcome exposure              outcome snp_r2.exposure
+         IL6 GCST90652487     IL-6 Keloid (Greene 2025)      0.04003726
+ snp_r2.outcome correct_causal_direction  steiger_pval
+   0.0001600273                     TRUE 7.935482e-171
+  原无种子值: r2.exp = 0.04003726 r2.out = 0.0001600273 P = 7.935482e-171 
+
+== 3. 功效（n_ctrl 采用论文 Table 1 / GWAS Catalog 口径）==
+  由 harmonised_Greene 重算累计 R2 = 0 （稿件用 0.0414）
+     Outcome n_case  n_ctrl N_total Power_OR1.2_predSE Power_OR1.5_predSE
+ Sakaue 2021    668  481244  481912              0.025              0.025
+ Greene 2025   7837 1593009 1600846              0.025              0.025
+ Predicted_SE Observed_SE Power_OR1.2_obsSE Power_OR1.1_obsSE
+          Inf  0.09123403         0.5153277         0.1800208
+          Inf  0.04708311         0.9720857         0.5256473
+  已写 table.power_v5_2026-09-26.csv
+
+
+== 3b. 功效表（修正 N_exp）==
+  harmonised_Greene 是否有 samplesize.exposure 列: FALSE 
+  N_exp = 21758 | 重算累计 R2 = 0.039973 （稿件用 0.0414）
+     Outcome n_case  n_ctrl N_total Power_OR1.2_predSE Power_OR1.5_predSE
+ Sakaue 2021    668  481244  481912          0.4693036          0.9870436
+ Greene 2025   7837 1593009 1600846          0.9999962          1.0000000
+ Predicted_SE Observed_SE Power_OR1.2_obsSE Power_OR1.1_obsSE
+   0.09682796  0.09123403         0.5153277         0.1800208
+   0.02831904  0.04708311         0.9720857         0.5256473
+
+
+== 3c. 功效表（终版：逐数据集 R2）==
+  发现期 nSNP = 23 | 累计 R2 = 0.041407 
+  复制期 nSNP = 22 | 累计 R2 = 0.039973 
+                   Outcome n_case  n_ctrl N_total nSNP       R2 Predicted_SE
+   Sakaue 2021 (discovery)    668  481244  481912   23 0.041407   0.09513674
+ Greene 2025 (replication)   7837 1593009 1600846   22 0.039973   0.02831904
+ Observed_SE Power_OR1.2_predSE Power_OR1.5_predSE Power_OR1.2_obsSE
+  0.09123403          0.4826323          0.9893312         0.5153277
+  0.04708311          0.9999962          1.0000000         0.9720857
+ Power_OR1.1_obsSE
+         0.1800208
+         0.5256473
+  已写 table.power_v5_2026-09-26.csv
+
+== 2c. Steiger（同时提供 r.exposure 与 r.outcome）==
+ id.exposure   id.outcome exposure              outcome snp_r2.exposure
+         IL6 GCST90652487     IL-6 Keloid (Greene 2025)      0.04003726
+ snp_r2.outcome correct_causal_direction  steiger_pval
+   0.0001600273                     TRUE 7.935482e-171
+  已写 table.Greene_steiger_v5_2026-09-26.csv
