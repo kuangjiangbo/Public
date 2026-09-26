@@ -1,0 +1,35 @@
+==============================================================================
+MR-PRESSO Results
+Analysis Date: 2026-06-18
+Exposure: IL-6 levels (GCST90012005)
+Outcome: Keloids (GCST90018874)
+==============================================================================
+
+## Global Pleiotropy Test
+  RSSobs = 6.25
+  P-value = 1.0
+  Interpretation: No significant pleiotropy detected.
+
+## Outlier Test
+  No outlier SNPs detected (all P > 0.05 threshold).
+
+## Causal Estimates (IVW, before outlier removal)
+  Beta = 0.194
+  SE = 0.091
+  P = 0.033
+  OR = 1.214 (95% CI: 1.016 - 1.452)
+
+## Outlier-corrected Estimates
+  Not applicable (no outliers detected).
+
+## Comparison with other sensitivity analyses
+  MR-Egger intercept: intercept = 0.048, SE = 0.035, P = 0.187
+  Cochran's Q (IVW): Q = 5.27, df = 22, P = 0.9999
+  
+  All three tests consistently show no evidence of horizontal pleiotropy.
+
+## Conclusion
+  MR-PRESSO confirms the absence of significant pleiotropy and outliers,
+  consistent with MR-Egger intercept test, supporting the validity of IVW estimates.
+  
+==============================================================================

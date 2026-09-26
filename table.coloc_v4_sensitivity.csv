@@ -1,0 +1,25 @@
+"Region","Type","Condition","p1","p2","p12","N_SNPs","PP.H4"
+"IL6R","prior_sensitivity","Default (coloc)",1e-04,1e-04,1e-05,6469,0.0118970093227201
+"IL6R","prior_sensitivity","Permissive_shared",1e-04,1e-04,1e-04,6469,0.107463630863113
+"IL6R","prior_sensitivity","Stringent_shared",1e-04,1e-04,1e-06,6469,0.0012025772982679
+"IL6R","prior_sensitivity","High_p1_IL6",0.001,1e-04,1e-05,6469,0.00772982755797344
+"IL6R","prior_sensitivity","High_p2_Keloid",1e-04,0.001,1e-05,6469,0.0101001637180669
+"IL6R","prior_sensitivity","Equal_priors",1e-04,1e-04,1e-04,6469,0.107463630863113
+"IL6R","prior_sensitivity","Very_stringent",1e-04,1e-04,1e-07,6469,0.000120388028145457
+"IL6R","prior_sensitivity","Very_permissive",0.001,0.001,1e-04,6469,0.0619267373403159
+"IL6R","maf_threshold","MAF >= 0",1e-04,1e-04,1e-05,7965,0.0108495142822666
+"IL6R","maf_threshold","MAF >= 0.01",1e-04,1e-04,1e-05,6476,0.0118903741589115
+"IL6R","maf_threshold","MAF >= 0.05",1e-04,1e-04,1e-05,4528,0.0136696545231202
+"IL6R","maf_threshold","MAF >= 0.1",1e-04,1e-04,1e-05,3640,0.0151098371423286
+"HLA","prior_sensitivity","Default (coloc)",1e-04,1e-04,1e-05,51471,0.0719129473748325
+"HLA","prior_sensitivity","Permissive_shared",1e-04,1e-04,1e-04,51471,0.130841709119833
+"HLA","prior_sensitivity","Stringent_shared",1e-04,1e-04,1e-06,51471,0.00768893533968969
+"HLA","prior_sensitivity","High_p1_IL6",0.001,1e-04,1e-05,51471,0.0719129473748325
+"HLA","prior_sensitivity","High_p2_Keloid",1e-04,0.001,1e-05,51471,0.0719129473748325
+"HLA","prior_sensitivity","Equal_priors",1e-04,1e-04,1e-04,51471,0.130841709119833
+"HLA","prior_sensitivity","Very_stringent",1e-04,1e-04,1e-07,51471,0.000774251385927726
+"HLA","prior_sensitivity","Very_permissive",0.001,0.001,1e-04,51471,0.130841709119833
+"HLA","maf_threshold","MAF >= 0",1e-04,1e-04,1e-05,58957,0.0798438791577206
+"HLA","maf_threshold","MAF >= 0.01",1e-04,1e-04,1e-05,51482,0.0719268057467046
+"HLA","maf_threshold","MAF >= 0.05",1e-04,1e-04,1e-05,39848,0.0582337741454394
+"HLA","maf_threshold","MAF >= 0.1",1e-04,1e-04,1e-05,32353,0.048215434378866
